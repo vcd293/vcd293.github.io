@@ -10,8 +10,10 @@
 /*
 
 	Color Legend
-
+	
 	#dddddd Body-bg ____ rgba(221, 221, 221, 1)
+	#dddddd Body-bg-dark rgba(14, 14, 14, 1);
+	
 	#2d2d2d Gray-dark __ rgba(45, 45, 45, 1)
 	#b2b2b2 Gray-mid ___ rgba(178, 178, 178, 1)
 	#f6f6f6 Gray-light _ rgba(246, 246, 246, 1)
@@ -37,12 +39,15 @@
 
 /* Default settings for the whole page (child elements of the <body>) */
 body{
-	background-color: #ddd;
-	font-family: Helvetica, Arial, sans-serif;
+	background-color: rgba(20, 20, 20, 1);
+	color: rgba(246, 246, 246, 1);
+	font-family: 'Barlow', sans-serif;
 	font-size: 16px; /* Browsers' default font-size is also 16px in general */
 	line-height: 1.4;
-	margin: 0 0 60px 0; /* Margin only applies to <body>, not to child elements */
+	margin: 0; /* Margin only applies to <body>, not to child elements */
 	padding: 0; /* Padding only applies to <body>, not to child elements */
+	font-weight: 400;
+	/*overflow: hidden;*/
 }
 
 /* Use border-box to not mess with unintiutive width-height calculations */
@@ -73,12 +78,12 @@ p.small-txt{
 /* Overriding default <a> colors */
 a, a:visited, a:active{
 	text-decoration: none;
-	color: #0c66b9;
+	color: rgba(246, 246, 246, .5);
 }
 
 /* Instead of using text-decoration: underline, we can show a dotted border when users hover an <a> */
 a:hover{
-	border-bottom: 1px dotted #0c66b9;
+	color: rgba(246, 246, 246, 1);
 }
 
 /*Style of code blocks in plain text*/
@@ -95,6 +100,41 @@ code{
 /* ========================================================================== */
 /* ========================================================================== */
 /* ========================================================================== */
+
+
+/* ========================================================================== */
+/* BG COLOR HELPERS  */
+/* ========================================================================== */
+
+.bg-color-grey-dark{
+	background-color: #2d2d2d;
+	color: #f6f6f6;
+}
+
+.bg-color-grey-mid{
+	background-color: #b2b2b2;
+	color: #2d2d2d;
+}
+
+.bg-color-grey-light{
+	background-color: #f6f6f6;
+	color: #2d2d2d;
+}
+
+.bg-color-red{
+	background-color: #e73035;
+	color: #f6f6f6;
+}
+
+.bg-color-yellow{
+	background-color: #f1c828;
+	color: #2d2d2d;
+}
+
+.bg-color-blue{
+	background-color: #0c66b9;
+	color: #f6f6f6;
+}
 
 
 
@@ -163,6 +203,166 @@ code{
 	display: table;
 }
 
+@media (max-width: 1300px){
+
+	.col-lg-1{
+		/*width: 8.33%;*/
+		width: calc(100% / 12 * 1); 
+	}
+	.col-lg-2{
+		/*width: 16.66%;*/
+		width: calc(100% / 12 * 2);
+	}
+	.col-lg-3{
+		/*width: 25%;*/
+		width: calc(100% / 12 * 3);
+	}
+	.col-lg-4{
+		/*width: 33.33%;*/
+		width: calc(100% / 12 * 4);
+	}
+	.col-lg-5{
+		/*width: 41.66%;*/
+		width: calc(100% / 12 * 5);
+	}
+	.col-lg-6{
+		/*width: 50%;*/
+		width: calc(100% / 12 * 6);
+	}
+	.col-lg-7{
+		/*width: 58.33%;*/
+		width: calc(100% / 12 * 7);
+	}
+	.col-lg-8{
+		/*width: 66.66%;*/
+		width: calc(100% / 12 * 8);
+	}
+	.col-lg-9{
+		/*width: 75%;*/
+		width: calc(100% / 12 * 9);
+	}
+	.col-lg-10{
+		/*width: 83.33%;*/
+		width: calc(100% / 12 * 10);
+	}
+	.col-lg-11{
+		/*width: 91.66%;*/
+		width: calc(100% / 12 * 11);
+	}
+	.col-lg-12{
+		/*width: 100%;*/
+		width: calc(100% / 12 * 12);
+	}
+
+
+}
+
+
+@media (max-width: 900px){
+
+	.col-md-1{
+		/*width: 8.33%;*/
+		width: calc(100% / 12 * 1); 
+	}
+	.col-md-2{
+		/*width: 16.66%;*/
+		width: calc(100% / 12 * 2);
+	}
+	.col-md-3{
+		/*width: 25%;*/
+		width: calc(100% / 12 * 3);
+	}
+	.col-md-4{
+		/*width: 33.33%;*/
+		width: calc(100% / 12 * 4);
+	}
+	.col-md-5{
+		/*width: 41.66%;*/
+		width: calc(100% / 12 * 5);
+	}
+	.col-md-6{
+		/*width: 50%;*/
+		width: calc(100% / 12 * 6);
+	}
+	.col-md-7{
+		/*width: 58.33%;*/
+		width: calc(100% / 12 * 7);
+	}
+	.col-md-8{
+		/*width: 66.66%;*/
+		width: calc(100% / 12 * 8);
+	}
+	.col-md-9{
+		/*width: 75%;*/
+		width: calc(100% / 12 * 9);
+	}
+	.col-md-10{
+		/*width: 83.33%;*/
+		width: calc(100% / 12 * 10);
+	}
+	.col-md-11{
+		/*width: 91.66%;*/
+		width: calc(100% / 12 * 11);
+	}
+	.col-md-12{
+		/*width: 100%;*/
+		width: calc(100% / 12 * 12);
+	}
+}
+
+@media (max-width: 600px){
+
+	.col-sm-1{
+		/*width: 8.33%;*/
+		width: calc(100% / 12 * 1); 
+	}
+	.col-sm-2{
+		/*width: 16.66%;*/
+		width: calc(100% / 12 * 2);
+	}
+	.col-sm-3{
+		/*width: 25%;*/
+		width: calc(100% / 12 * 3);
+	}
+	.col-sm-4{
+		/*width: 33.33%;*/
+		width: calc(100% / 12 * 4);
+	}
+	.col-sm-5{
+		/*width: 41.66%;*/
+		width: calc(100% / 12 * 5);
+	}
+	.col-sm-6{
+		/*width: 50%;*/
+		width: calc(100% / 12 * 6);
+	}
+	.col-sm-7{
+		/*width: 58.33%;*/
+		width: calc(100% / 12 * 7);
+	}
+	.col-sm-8{
+		/*width: 66.66%;*/
+		width: calc(100% / 12 * 8);
+	}
+	.col-sm-9{
+		/*width: 75%;*/
+		width: calc(100% / 12 * 9);
+	}
+	.col-sm-10{
+		/*width: 83.33%;*/
+		width: calc(100% / 12 * 10);
+	}
+	.col-sm-11{
+		/*width: 91.66%;*/
+		width: calc(100% / 12 * 11);
+	}
+	.col-sm-12{
+		/*width: 100%;*/
+		width: calc(100% / 12 * 12);
+	}
+}
+
+
 
 
 
@@ -186,33 +386,6 @@ font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
 <i class="fas fa-bars"></i>
 <i class="fas fa-search"></i>
-
-
-
-
-/* ========================================================================== */
-/* CONTENT */
-/* ========================================================================== */
-
-images/avatar-vim-crouwel.jpg
-Wim Crouwel
-typing...
-09:41
-
-images/avatar-massimo-vignelli.jpg
-Massimo Vignelli
-If you can design one thing, you can design everything
-27 May '14
-
-images/avatar-paul-rand.jpg
-Paul Rand
-Don't try to be original; just try to be good
-26 Nov '96
-
-images/avatar-josef-muller-brockmann.jpg
-Josef Müller-Brockmann
-The grid system is an aid, not a guarantee. It permits a number of possible uses and each designer can look for a solution appropriate to his personal style. But one must learn how to use the grid; it is an art that requires practice.
-30 Aug '96
 
 
 
@@ -280,39 +453,6 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 
 
 
-/* ========================================================================== */
-/* BG COLOR HELPERS  */
-/* ========================================================================== */
-
-.bg-color-grey-dark{
-	background-color: #2d2d2d;
-	color: #f6f6f6;
-}
-
-.bg-color-grey-mid{
-	background-color: #b2b2b2;
-	color: #2d2d2d;
-}
-
-.bg-color-grey-light{
-	background-color: #f6f6f6;
-	color: #2d2d2d;
-}
-
-.bg-color-red{
-	background-color: #e73035;
-	color: #f6f6f6;
-}
-
-.bg-color-yellow{
-	background-color: #f1c828;
-	color: #2d2d2d;
-}
-
-.bg-color-blue{
-	background-color: #0c66b9;
-	color: #f6f6f6;
-}
 
 
 

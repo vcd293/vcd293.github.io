@@ -2,8 +2,11 @@
 <html>
 	
 	<head>
-		<title>CSS / Example 4</title>
+		<title>CSS / Example 5</title>
 		<meta charset='utf-8'>
+
+		<!-- Please read => https://www.w3schools.com/css/css_rwd_viewport.asp  -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- use https://fontawesome.com/start -->
 		<!-- or use https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself -->
 		<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
@@ -13,138 +16,64 @@
 	
 	<body>
 		
-		<div class='container'>
-
-			<div class='page-header'>
-				<h1>iDevice X <span class='model-indicator'>R</span></h1>
-				<h2>Only for the fans.</h2>	
-			</div>
+		<div class='navbar col-12'>
+			<div class='logo'>Resize your browser</div>
 			
-
-			<div class='device'>
 			
-				<div class='device-top row'>
-					<div class='col-2 device-top-clock '>
-						13:06
-					</div>
-					<div class='col-8'>
-						<div class='device-notch'>
-							<div class='device-notch-camera'>
-							</div>
-						</div>
-					</div>
-					<div class='col-2 device-top-info'>
-						<!-- <i class="fas fa-signal"></i> -->
-						<i class="fas fa-wifi"></i>
-						<i class="fas fa-battery-three-quarters"></i>
-					</div>
-				</div>	
-			
-
-				<div class='app-head row'>
-					<div class='col-1'>
-						<i class="fas fa-bars"></i>
-					</div>
-					<div class='col-10'>
-						Messages
-					</div>
-					<div class='col-1'>
-						<i class="fas fa-search"></i>
-					</div>
-				</div>
-
-				<div class='app-body'>
-					<ul class='msg-container'>
-						
-
-
-						<li class='msg-row row' >
-							<div class='col-1'>
-								<div class='avatar has-story' style='background-image: url(images/avatar-vim-crouwel.jpg);' >
-									<div class='online-indicator'></div>
-								</div>
-							</div>
-							<div class='col-9'>
-								<div class='person'>
-									<p class='person-name'>Wim Crouwel</p>
-									<p class='person-msg is-typing'>typing...</p>
-								</div>
-							</div>
-							<div class='col-2'>
-								<div class='date'>09:41</div>
-							</div>	
-						</li>
-
-
-
-						<li class='msg-row row' >
-							<div class='col-1'>
-								<div class='avatar' style='background-image: url(images/avatar-massimo-vignelli.jpg);' >
-									
-								</div>
-							</div>
-							<div class='col-9'>
-								<div class='person'>
-									<p class='person-name'>Massimo Vignelli</p>
-									<p class='person-msg'>If you can design one thing, you can design everything</p>
-								</div>
-							</div>
-							<div class='col-2'>
-								<div class='date'>27 May '14</div>
-							</div>	
-						</li>
-
-
-
-						<li class='msg-row row' >
-							<div class='col-1'>
-								<div class='avatar' style='background-image: url(images/avatar-paul-rand.jpg);' >
-									
-								</div>
-							</div>
-							<div class='col-9'>
-								<div class='person'>
-									<p class='person-name'>Paul Rand</p>
-									<p class='person-msg'>Don't try to be original; just try to be good</p>
-								</div>
-							</div>
-							<div class='col-2'>
-								<div class='date'>26 Nov '96</div>
-							</div>	
-						</li>
-						
-
-						<li class='msg-row row' >
-							<div class='col-1'>
-								<div class='avatar' style='background-image: url(images/avatar-josef-muller-brockmann.jpg);' >
-									
-								</div>
-							</div>
-							<div class='col-9'>
-								<div class='person'>
-									<p class='person-name'>Josef Müller-Brockmann</p>
-									<p class='person-msg'>The grid system is an aid, not a guarantee. It permits a number of possible uses and each designer can look for a solution appropriate to his personal style. But one must learn how to use the grid; it is an art that requires practice.</p>
-								</div>
-							</div>
-							<div class='col-2'>
-								<div class='date'>30 Aug '96</div>
-							</div>	
-						</li>
-
-
-					</ul>
-				</div>
-
-				<a href='#' class='new-message-button'>
-					<i class="fas fa-plus"></i>
-				</a>
-
-
-			</div>
+			<label for='menu-check-box' class='mobile-menu-btn' ><i class='fas fa-bars'></i></label>
+			<input type='checkbox' id='menu-check-box'  />
+			<ul class='menu-list'>
+				<li> <a href="#">Menu Item 1</a> </li>
+				<li> <a href="#">Menu Item 2</a> </li>
+				<li> <a href="#">Menu Item 3</a> </li>
+				<li> <a href="#">Menu Item 4</a> </li>
+				<li> <a href="#">Menu Item 5</a> </li>
+			</ul>
 		
 
-
 		</div>
+
+		<div class='div1'></div>
+		<div class='div2'></div>
+
+
+		<!-- 
+			If you want keep different elements in the same row, the total column count must be smaller or equal to 12
+			For example col-1 + col-2 + col-2 + col-7 = col-12 
+			col-12 equals to width:100% 
+		-->
+		<div class='col-1 col-lg-5 col-md-4 col-sm-12 bg-color-red box'></div>
+		<div class='col-2 col-lg-1 col-md-6 col-sm-12 bg-color-blue box'></div>
+		<div class='col-2 col-lg-3 col-md-1 col-sm-12 bg-color-yellow box'></div>
+		<div class='col-7 col-lg-3 col-md-1 col-sm-12 bg-color-red box'></div>
+
+		<!-- 
+			We can also put column in columns
+			But in this case, the width of a child element will be determined by it's parent's width
+			Please study CSS / Example 4
+		-->
+
+		<div class='col-5 col-lg-1 col-md-1 col-sm-12 bg-color-yellow box'>
+			<div class='col-1 col-lg-12 bg-color-grey-dark'>Inner column</div>
+			<div class='col-2 col-lg-12 bg-color-grey-mid'>Another inner column</div>
+			<div class='col-2 col-lg-12 bg-color-grey-light'>Yet another inner column</div>
+		</div>
+		<div class='col-2 col-lg-2 col-md-7 col-sm-12 bg-color-blue box'></div>
+		<div class='col-3 col-lg-3 col-md-1 col-sm-12 bg-color-yellow box'></div>
+		<div class='col-2 col-lg-6 col-md-3 col-sm-12 bg-color-red box'></div>
+
+
+		<div class='col-2 col-lg-3 col-md-7 col-sm-12 bg-color-blue box'></div>
+		<div class='col-3 col-lg-5 col-md-1 col-sm-12 bg-color-yellow box'></div>
+		<div class='col-5 col-lg-3 col-md-1 col-sm-12 bg-color-blue box'></div>
+		<div class='col-2 col-lg-1 col-md-3 col-sm-12 bg-color-red box'></div>
+
+		<div class='col-7 col-lg-2 col-md-1 col-sm-12 bg-color-red box'></div>
+		<div class='col-1 col-lg-2 col-md-4 col-sm-12 bg-color-red box'></div>
+		<div class='col-2 col-lg-4 col-md-6 col-sm-12 bg-color-blue box'></div>
+		<div class='col-2 col-lg-4 col-md-1 col-sm-12 bg-color-yellow box'></div>
+				
+	
 
 
 	</body>
