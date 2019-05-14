@@ -1,0 +1,318 @@
+/*
+	WARNING
+	THIS CSS FILE IS NOT AND SHOULD NOT BE LINKED TO THE INDEX.HTML
+	WE WILL USE THIS FOR COPYING AND PASTING
+
+*/
+
+
+
+/*
+
+	Color Legend
+
+	#dddddd Body-bg ____ rgba(221, 221, 221, 1)
+	#2d2d2d Gray-dark __ rgba(45, 45, 45, 1)
+	#b2b2b2 Gray-mid ___ rgba(178, 178, 178, 1)
+	#f6f6f6 Gray-light _ rgba(246, 246, 246, 1)
+
+	#e73035 Red ________ rgba(231, 48, 53, 1)
+	#f1c828 Yellow _____ rgba(241, 200, 40, 1) 
+	#0c66b9 Blue _______ rgba(12, 102, 185, 1)
+	#FF0088 Magenta ____ rgba(255, 0, 136, 1)
+
+	You may want use a CSS pre-processor like Sass or Less in future in order to keep colors as variables
+*/
+
+
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+/* START OF BASIC SETTINGS */
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+
+
+/* Default settings for the whole page (child elements of the <body>) */
+body{
+	background-color: #ddd;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px; /* Browsers' default font-size is also 16px in general */
+	line-height: 1.4;
+	margin: 0 0 60px 0; /* Margin only applies to <body>, not to child elements */
+	padding: 0; /* Padding only applies to <body>, not to child elements */
+}
+
+/* Use border-box to not mess with unintiutive width-height calculations */
+/* For more explanation check Week 6 - CSS / Example 2  */
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+/* Simply include this class in the parent element of the float:left-right elements */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Quick Reset for headings and paragraph */
+h1, h2, h3, h4, h5, h6, p
+{
+	margin: 0;
+	font-weight: normal;
+}
+
+/* Paragraph with smaller font-size */
+p.small-txt{
+	font-size: 12px;
+}
+
+/* Overriding default <a> colors */
+a, a:visited, a:active{
+	text-decoration: none;
+	color: #0c66b9;
+}
+
+/* Instead of using text-decoration: underline, we can show a dotted border when users hover an <a> */
+a:hover{
+	border-bottom: 1px dotted #0c66b9;
+}
+
+/*Style of code blocks in plain text*/
+code{
+	background-color: rgba(0,0,0,.1);
+	font-family: monospace;
+}
+
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+/* END OF BASIC SETTINGS */
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+
+
+
+/* ========================================================================== */
+/* CSS GRID  */
+/* ========================================================================== */
+
+.col-1{
+	/*width: 8.33%;*/
+	width: calc(100% / 12 * 1); 
+}
+.col-2{
+	/*width: 16.66%;*/
+	width: calc(100% / 12 * 2);
+}
+.col-3{
+	/*width: 25%;*/
+	width: calc(100% / 12 * 3);
+}
+.col-4{
+	/*width: 33.33%;*/
+	width: calc(100% / 12 * 4);
+}
+.col-5{
+	/*width: 41.66%;*/
+	width: calc(100% / 12 * 5);
+}
+.col-6{
+	/*width: 50%;*/
+	width: calc(100% / 12 * 6);
+}
+.col-7{
+	/*width: 58.33%;*/
+	width: calc(100% / 12 * 7);
+}
+.col-8{
+	/*width: 66.66%;*/
+	width: calc(100% / 12 * 8);
+}
+.col-9{
+	/*width: 75%;*/
+	width: calc(100% / 12 * 9);
+}
+.col-10{
+	/*width: 83.33%;*/
+	width: calc(100% / 12 * 10);
+}
+.col-11{
+	/*width: 91.66%;*/
+	width: calc(100% / 12 * 11);
+}
+.col-12{
+	/*width: 100%;*/
+	width: calc(100% / 12 * 12);
+}
+
+
+[class*="col-"]{
+	float: left;
+}
+
+
+.row::after{
+	content: '';
+	clear: both;
+	display: table;
+}
+
+
+
+
+/* ========================================================================== */
+/* APPLE FONT */
+/* ========================================================================== */
+
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+
+
+
+/* ========================================================================== */
+/* FONTAWESOME ICONS */
+/* ========================================================================== */
+/* https://fontawesome.com/icons?d=gallery */
+
+<i class="fas fa-wifi"></i>
+<i class="fas fa-battery-three-quarters"></i>
+<i class="fas fa-plus"></i>
+
+<i class="fas fa-bars"></i>
+<i class="fas fa-search"></i>
+
+
+
+
+/* ========================================================================== */
+/* CONTENT */
+/* ========================================================================== */
+
+images/avatar-vim-crouwel.jpg
+Wim Crouwel
+typing...
+09:41
+
+images/avatar-massimo-vignelli.jpg
+Massimo Vignelli
+If you can design one thing, you can design everything
+27 May '14
+
+images/avatar-paul-rand.jpg
+Paul Rand
+Don't try to be original; just try to be good
+26 Nov '96
+
+images/avatar-josef-muller-brockmann.jpg
+Josef Müller-Brockmann
+The grid system is an aid, not a guarantee. It permits a number of possible uses and each designer can look for a solution appropriate to his personal style. But one must learn how to use the grid; it is an art that requires practice.
+30 Aug '96
+
+
+
+
+/* ========================================================================== */
+/* BODY BG GRADIENT  */
+/* ========================================================================== */
+/* https://www.cssmatic.com/gradient-generator */
+
+background: rgba(179,0,95,1);
+background: -moz-linear-gradient(45deg, rgba(179,0,95,1) 0%, rgba(0,0,196,1) 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(179,0,95,1)), color-stop(100%, rgba(0,0,196,1)));
+background: -webkit-linear-gradient(45deg, rgba(179,0,95,1) 0%, rgba(0,0,196,1) 100%);
+background: -o-linear-gradient(45deg, rgba(179,0,95,1) 0%, rgba(0,0,196,1) 100%);
+background: -ms-linear-gradient(45deg, rgba(179,0,95,1) 0%, rgba(0,0,196,1) 100%);
+background: linear-gradient(45deg, rgba(179,0,95,1) 0%, rgba(0,0,196,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3005f', endColorstr='#0000c4', GradientType=1 );
+
+
+
+
+/* ========================================================================== */
+/* DEVICE SHADOW  */
+/* ========================================================================== */
+/* https://www.cssmatic.com/box-shadow */
+
+-webkit-box-shadow: 0px 0px 200px 0px rgba(255,0,255,.6);
+-moz-box-shadow: 0px 0px 200px 0px rgba(255,0,255,.6);
+box-shadow: 0px 0px 200px 0px rgba(255,0,255,.6);
+
+
+
+
+/* ========================================================================== */
+/* NEW MESSAGE BUTTON SHADOW  */
+/* ========================================================================== */
+
+-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+
+
+
+
+/* ========================================================================== */
+/* SCROLLBAR  */
+/* ========================================================================== */
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    /*  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    /*  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+    background-color: transparent;
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+
+
+
+/* ========================================================================== */
+/* BG COLOR HELPERS  */
+/* ========================================================================== */
+
+.bg-color-grey-dark{
+	background-color: #2d2d2d;
+	color: #f6f6f6;
+}
+
+.bg-color-grey-mid{
+	background-color: #b2b2b2;
+	color: #2d2d2d;
+}
+
+.bg-color-grey-light{
+	background-color: #f6f6f6;
+	color: #2d2d2d;
+}
+
+.bg-color-red{
+	background-color: #e73035;
+	color: #f6f6f6;
+}
+
+.bg-color-yellow{
+	background-color: #f1c828;
+	color: #2d2d2d;
+}
+
+.bg-color-blue{
+	background-color: #0c66b9;
+	color: #f6f6f6;
+}
+
+
+
